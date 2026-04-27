@@ -18,12 +18,14 @@ def find_grade(avg):
 marks=[]
 i=0
 while i<5:
-    n=int(input(f"Enter marks {i+1}:"))
+    n=int(input(f"Enter mark {i+1}:"))
+    i+=1 
     if n<0 or n>100:
         print("Invalid number entered please enter correct mark between 1-100")
         continue
+    
     marks.append(n)
-    i+=1 
+    
         
 total=calculate_total(marks)
 avg=calculate_average(total,len(marks))
